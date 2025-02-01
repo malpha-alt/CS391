@@ -19,7 +19,7 @@ function checkAge() {
         document.getElementById("main-content").style.visibility = "visible";
         document.getElementById("error-content").style.visibility = "hidden";
     } else {
-        document.getElementById("error-messaege").innerHTML = errorMessage;
+        document.getElementById("error-message").innerHTML = errorMessage;
         document.getElementById("error-content").style.visibility = "visible";
         document.getElementById("main-content").style.visibility = "hidden";
     }
