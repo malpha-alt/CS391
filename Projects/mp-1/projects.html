@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head charset="UTF-8">
-        <meta name="description" content="Matheus Alpha's resume About page">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="Matheus Alpha's resume Projects page">
         <link type="text/css" rel="stylesheet" href="style.css">
         <title>Resume | About</title>  
     </head>
@@ -15,12 +17,12 @@
             <div id="container">
                 <nav>
                     <ul>
-                        <li><a href=".\index.html">Home</a></li>
-                        <li><a href=".\about.html">About</a></li>
-                        <li><a href=".\education.html">Education</a></li>
-                        <li><a href=".\work.html">Work Experience</a></li>
-                        <li><a href=".\projects.html">Projects</a></li>
-                        <li><a href=".\certifications.html">Certifications</a></li>
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./education.html">Education</a></li>
+                        <li><a href="./work.html">Work Experience</a></li>
+                        <li><a href="./projects.html">Projects</a></li>
+                        <li><a href="./certifications.html">Certifications</a></li>
                     </ul>
                 </nav>
     
@@ -29,14 +31,28 @@
     
                         <div id="text">
                             <ul>
+                                <li>Calculator</li>
+                                <li class="sub">
+                                    <input id="first" placeholder="Enter the first number"><br>
+                                    <input id="second" placeholder="Enter the second number"><br>
+                                    <button onclick="addition()">+</button>
+                                    <button onclick="subtraction()">-</button>
+                                    <button onclick="multiplication()">*</button>
+                                    <button onclick="division()">/</button>
+                                    <button onclick="power()">^</button>
+                                    <button onclick="clearCalc()">Clear</button>
+                                    <li class="sub" id="output">Result: </li>
+                                </li>
+
+
                                 <li>Analysis of Chelsea's Water Consumption Statistics</li>
                                 <li class="sub">Analyzed the water consumption statistics of Chelsea, MA, and developed a report on the findings.</li>
                                 <li class="sub">Used Python and Pandas to clean and analyze the data.</li>
-                                <p>September 2023 - December 2023</p>
-                                <li>Project 2: Portfolio Website</li>
-                                <li class="sub">Developed a portfolio website using React.js and Node.js.</li>
-                                <li class="sub">Implemented a RESTful API with Express.js and MongoDB.</li>
-                                <p>April 2023 - June 2023</p>
+                                <li class="date">September 2023 - December 2023</li>
+                                <li>Simple Neural Network for Digit Recognition</li>
+                                <li class="sub">Developed a basic neural network using Python and TensorFlow to classify handwritten digits from the MNIST dataset.</li>
+                                <li class="sub">Trained the model with various activation functions and optimizers to improve accuracy, achieving over 95% accuracy on the test set.</li>
+                                <li class="date">October 2024 - December 2024</li>
                             </ul>
                         </div>
                 </main>
@@ -45,5 +61,6 @@
         <footer>
             <p>All Rights Reserved by Matheus A A Souza <a href="..." target="_blank">Credits</a> &copy;</p>
         </footer>
+        <script src="script.js"></script>
     </body>
 </html>

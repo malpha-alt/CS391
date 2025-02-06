@@ -9,11 +9,18 @@ body{
     color: whitesmoke;
     margin: 0;
     padding: 0;
+    min-height: 100vh;  
+    flex-direction: column;
+    display: flex;
 }
 
 #page-wrapper{
+    background-color: red;
     width: 90vw;
     margin: 0 auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
 }
 
 header{
@@ -26,11 +33,11 @@ header{
 }
 
 #container {
-    background-color: #333;
     width: 100%;
     display: flex;
     flex-direction: row;
     position: relative;
+    flex: 1;
 }
 
 nav{
@@ -68,22 +75,19 @@ main{
     display: flex;
     flex-direction: column;
     width:100%;
-    height: 100vh;
-    background-color: #2d2d2d;
+    background-color: #2d2d2d; /*2d2d2d*/
 }
 
 main p{
     margin: 0 2vw;
-
     font-size: calc(1px + 2vw);
 }
-
 
 #main{
     width: 100%;
     display: flex;
     flex-direction: row;
-    padding: 1vh 2vw;
+    padding: 1vh 2vw;;
 }
 
 #main-text{
@@ -108,8 +112,7 @@ main p{
 #profile-image{
     display: block;
     max-width: 100%;
-    border: 1px solid whitesmoke;
-    
+    border: 1px solid whitesmoke;  
 }
 
 #title{
@@ -127,7 +130,9 @@ footer{
     padding: 1vh 1vw;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;}
+    justify-content: space-evenly;
+    flex-shrink: 0;
+}
 
 footer a {
     color: whitesmoke;
@@ -135,7 +140,7 @@ footer a {
 
 
 #text {
-    max-width: 100%;
+    max-width: 95%;
     align-content: flex-start;
     font-weight: bold;
 }
@@ -144,34 +149,126 @@ footer a {
     list-style: none; 
     padding: 1vh 1vw 1vh 3vw;
     margin: 0;
-    display: column;
+    flex: 1;
     justify-content: space-evenly;
 }
 
 #text li {
     margin: 1vh 0;
-    padding: 3vh;
+    padding: 1vh;
     border-left: 6px solid rgb(0, 43, 7);
-    font-size: calc(1px + 2vw);
+    font-size: calc(1px + 1.5vw);
     color: whitesmoke;
     background-color: #333;
 
 }
 
-#text p {
-    font-size: calc(1vh + 1vw);
+#text li.date {
+    font-size: calc(1px + 1vw);
     color: whitesmoke;
+    border: 0;
+    background-color: #2d2d2d;
     text-align: right;
     margin: 3vh 1vw;
 }
 
 #text li.sub {
     margin: 2vh 0vw 0vw 10vw;
-    padding: 3vh;
+    padding: 1vh;
     border-left: 6px solid rgb(0, 43, 7);
     font-size: calc(1px + 1vw);
     color: whitesmoke;
     background-color: #333;
+}
+
+#text input {
+    width: 80%;
+    padding: 0.5vh 1vw;
+    margin: 0.5vh 0;
+    font-size: calc(1px + 1.5vw);
+    background-color: #444;
+    color: whitesmoke;
+    border: 1px solid #666;
+}
+
+#text button {
+    padding: 1vh 2vw;
+    margin: 1vh 0.5vw;
+    font-size: calc(1px + 1.5vw);
+    background-color: rgb(0, 43, 7);
+    color: whitesmoke;
+    border: none;
+    cursor: pointer;
+}
+
+#text li.output{
+    justify-self: flex-start;
+}
+
+@media screen and (max-width: 1000px) {
+    main{
+        display: flex;
+        flex-direction: column;
+        width:100%;
+        height: 100vh;
+    }
+
+    main p{
+        margin: 2% 2%;
+        font-size: calc(2px + 2.5vw);
+    }
+
+    #main-image{
+        display: block;
+        width: 40%;   
+    }
+    #profile-image{
+        width: 100%;
+    }
+
+    #main{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;;
+    }
+
+    #main-text{
+        align-self: center;
+        width: 100%;
+        padding: 2vh 1vw;
+        margin: 1vh 1vw;
+        font-size: calc(2px + 2.5vw);
+    }
+
+    #bot-text{
+        align-self: center;
+        width: 100%;
+        padding: 0vh 3vw;
+        margin: 1vh 1vw;
+        font-size: calc(2px + 2.5vw);
+    }
+
+    #main-image{
+        margin: 1vh auto;
+    }
+
+    #main-title{
+        text-align: center;
+    }
+
+    #text p{
+        font-size: calc(1px + 2vw);
+    }
+
+    #text li {
+        font-size: calc(2px + 2.5vw);
+    }
+
+    #text li.sub{
+        font-size: calc(1px + 2vw);
+    }
+    
 }
 
 @media screen and (max-width: 750px) {
@@ -205,67 +302,5 @@ footer a {
         padding: 1% .5%;
         margin: 1% .5%;
     }
-}
-
-@media screen and (max-width: 1000px) {
-    main{
-        display: flex;
-        flex-direction: column;
-        width:100%;
-        height: 100vh;
-    }
-
-    main p{
-        margin: 2% 2%;
-        font-size: calc(2px + 2.5vw);
-    }
-
-    #main-image{
-        display: block;
-        width: 40%;   
-    }
-    #profile-image{
-        width: 100%;
-    }
-
-    #main{
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-
-    #main-text{
-        align-self: center;
-        width: 100%;
-        padding: 2vh 1vw;
-        margin: 1vh 1vw;
-        font-size: calc(2px + 2.5vw);
-    }
-
-    #bot-text{
-        align-self: center;
-        width: 100%;
-        padding: 0vh 3vw;
-        margin: 1vh 1vw;
-        font-size: calc(2px + 2.5vw);
-    }
-
-    #main-image{
-        margin: 1vh auto;
-    }
-
-    #main-title{
-        text-align: center;
-    }
-
-    #text li {
-        font-size: calc(2px + 2.5vw);
-    }
-
-    #text li.sub{
-        font-size: calc(1px + 2vw);
-    }
-    
 }
 
